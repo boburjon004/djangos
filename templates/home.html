@@ -1,0 +1,17 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <title> bosh sahifa</title>
+    </head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hush habarlar!</h1>
+<ul>
+    {% for post in object_list %}
+        <li><h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2></br>{{ post.text }}</br></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+</body>
+</html>

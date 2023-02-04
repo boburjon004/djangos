@@ -1,0 +1,40 @@
+*{
+    background-color: rgb(171, 230, 230);
+}
+h1{
+    text-align: center;
+    color: rgb(40, 89, 187);
+}
+p{
+    margin-left: 50px;
+    font-size: 25;
+    font-family: italic;
+}
+h2{
+    margin-left: 50px;
+    font-family: serif;
+}
+li{
+    margin-left: 50px;
+}
+.hv{
+    margin-bottom: 20px;
+}
+header{
+    display: flex;
+}
+.divs{
+    display: flex;
+}
+a:hover{
+color: rgb(80, 193, 24);
+border-bottom: 1px solid rgb(80, 193, 24);
+}
+.hrg{
+    text-decoration: none;
+    margin-left: 600px;
+    color: rgb(9, 87, 129);
+}
+.hrj{
+    font-size: 15px;
+}

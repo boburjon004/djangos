@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class='hv'>Hozirgi Yangiliklar</h1>
+<ul>
+    {% for post in object_list %}
+    <li><h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2><p>{{ post.body }}</p>
+</ul>
+{% endfor %}
+{% endblock content %}

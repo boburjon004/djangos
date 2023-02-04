@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <title> bosh sahifa</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+<body>
+<header>
+    <div class='divs'>
+<p><a href="{% url 'homes' %}" class='hrg'>Yangiliklar</a></p>
+<p><a href="{% url 'home' %}" class='hrg'>Bosh sahifa</a></p>
+<p>
+    <a href="{% url 'login' %}" class='hrj'>Saytga Kirish</a></p>
+    <p>  <a href="{% url 'signup' %}" class='hrj'>Ro'yhatdan o'tish</a></p>
+    </div>
+</header>
+{% if user.is_authenticated %}
+    <p>Hush kelibsiz, {{ user.username }} </p>
+    <p><a href="{% url 'logout' %}">Chiqish</a></p>
+{% else %}
+
+{% endif %}
+
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+<footer>
+    <h2><a href="{% url 'blog_create' %}">Yangi post yozish</a></h2>
+</footer>
+</body>
+</html>
